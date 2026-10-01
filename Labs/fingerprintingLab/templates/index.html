@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Fingerprinting Lab</title>
+</head>
+
+<body>
+
+    <h1>Browser Fingerprinting Lab</h1>
+
+    <h2>Passive Feature Collection</h2>
+    <p>Passive features are collected from the HTTP request.</p>
+
+    <h2>Active Feature Collection</h2>
+
+    <p id="feature-output">
+        Waiting for JavaScript...
+    </p>
+    <hr>
+<h2>Browser Fingerprint</h2>
+
+<p id="fingerprint-output">
+    Generating fingerprint...
+</p>
+<h2>Alice's Typing Rhythm</h2>
+
+<p>
+    Type the following sentence exactly:
+</p>
+
+<p id="target-sentence">
+    Cookies are gone, but Alice’s rhythm still leaves traces!
+</p>
+
+<input
+    type="text"
+    id="typing-input"
+    autocomplete="off"
+    style="width: 500px;"
+>
+
+<button id="restart-button">
+    Restart
+</button>
+
+<p id="typing-results"></p>
+    <script src="{{ url_for('static', filename='fingerprint.js') }}"></script>
+	<script src="{{ url_for('static', filename='fingerprint2.js') }}"></script>
+</body>
+</html>
